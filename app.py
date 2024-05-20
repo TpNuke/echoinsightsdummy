@@ -82,7 +82,7 @@ def result_page():
     st.write(f"Overall sentiment: {overall_sentiment}")
 
     st.subheader("Word Cloud")
-    generate_wordcloud(translated_comments['text'])
+    generate_wordcloud(translated_comments['translated_text'])
 
     # Comments over time
     df['comment_published'] = pd.to_datetime(df['published_at'])
