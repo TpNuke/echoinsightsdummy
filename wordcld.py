@@ -3,6 +3,9 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 def generate_wordcloud(df_column):
     comment_text = ' '.join(df_column)
+    WTR=['quot','br','<','>']
+    for w in WTR:
+        comment_text=comment_text.replace(w,'')
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(comment_text)
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.imshow(wordcloud, interpolation='bilinear')
