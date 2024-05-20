@@ -63,13 +63,13 @@ def result_page():
 
     # Display top 10 comments with sentiments
     st.subheader("Top 10 Comments based on Sentiment")
-    st.write(top_comments[['author', 'text', 'vader_sentiment']])
+    st.write(top_comments[['author', 'text', 'translated_text','vader_sentiment']])
 
     worst_comments = df.sort_values(by='vader_sentiment', ascending=True).head(10)
 
     # Display worst 10 comments with sentiments
     st.subheader("Worst 10 Comments based on Sentiment")
-    st.write(worst_comments[['author', 'text', 'vader_sentiment']])
+    st.write(worst_comments[['author', 'text','translated_text', 'vader_sentiment']])
 
     # Display sentiment distribution plot
     st.subheader("Sentiment Distribution")
