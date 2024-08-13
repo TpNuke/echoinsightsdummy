@@ -5,7 +5,7 @@ def fetch_comments(video_id):
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyB47XVqTefMFpRGzMavn1KMc9W1Jf8BrCg"
+    DEVELOPER_KEY = ""
   
     youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=DEVELOPER_KEY)
 
